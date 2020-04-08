@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+{% block content %}
+        <form class='form'>
+            <fieldset class='fieldset'>
+                <div class='div-form'>
+                    <div class='div-field'>
+                        <p class='paragraph'>Welcome, Join us for free</p>
+                    </div>
+                    <div class='div-field2'>
+                        <label class='label'>Username</label>
+                        <input class='input' type='text'>
+                        <label class='label'>Email</label>
+                        <input class='input' type='email'>
+                        <label class='label'>Password</label>
+                        <input class='input' type='password'>
+                        <label class='label'>Confirm Password</label>
+                        <input class='input' type='passoword'>
+                        <div class='div-submit'>
+                            <input class='submit' type='submit'>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <footer class='footer'>
+                <p class='p-footer'>Already have an account? Click <a class='f-link' href={{url_for('login')}}>here</a></p>
+            </footer>
+        </form>
+{% endblock %}

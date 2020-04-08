@@ -1,0 +1,155 @@
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    margin: 0;
+    background: linear-gradient(to top, rgb(66, 64, 64), rgba(65, 60, 60, 0.6));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/*layout.html*/
+.header{
+    background-color: rgb(27, 26, 26);
+    padding: 20px 10%;
+    margin: 0;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.header a{
+    color: aliceblue;
+    text-decoration: none;
+    transition: all 0.2s ease 0.2s;
+}
+.header a:hover{
+    color: aqua;
+}
+.logo {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    font-size: large;
+    margin-right: auto;
+}
+.navigation{
+    display: inline-block;
+}
+.div-link{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    margin-right: 20px;
+}
+.link{
+    margin: 10px;
+}
+.button{
+    padding: 9px 25px;
+    background-color: rgb(132, 132, 236);
+    border-radius: 50px;
+    border: none;
+    transition: all 0.2s ease 0.2s;
+    font-size: large;
+    font-weight: bold;
+    color: aliceblue;
+}
+.button:hover{
+    background-color: rgba(113, 113, 238, 0.6);
+}
+.block{
+    position: relative;
+    top: 1em;
+}
+
+/*registratio/login html*/
+.head{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+}
+.form{
+    position: absolute;
+    left: 30%;
+    top: 2em;
+    max-width: 500px;
+}
+.fieldset{
+    background-color: rgb(47, 48, 45, 0.5);
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+.div-form{
+    display: flex;
+    flex-direction: row;
+}
+.div-field{
+    background-color: black;
+    margin-right: 40px;
+    text-align: center;
+    vertical-align: middle;
+}
+.paragraph{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+    font-weight: bolder;
+    color: aliceblue;
+}
+.div-field2{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+.legend{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: aliceblue;
+}
+.label{
+    font-family: Arial, Helvetica, sans-serif;
+    color: aliceblue;
+    margin-top: 20px;
+}
+.input{
+    margin-bottom: 20px;
+    border: 0;
+    background: transparent;
+    border-bottom: 2px solid rgb(223, 231, 235);
+    width: 80%;
+    height: 25px;
+}
+.input:checked{
+    border: blue solid 5px;
+}
+.div-submit{
+    left: 50%;
+    margin-bottom: 20px;
+    padding: 0 40px;
+}
+.submit{
+    background-color: rgb(103, 103, 231);
+    border-radius: 5px;
+    border: 0;
+    transition: all 0.2s ease 0.2s;
+    padding: 9px 15px;
+    color: aliceblue;
+    font-weight: bold;
+ }
+.submit:hover{
+    background-color: rgba(103, 103, 231, 0.6);
+}
+.footer{
+    position: absolute;
+}
+.p-footer{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    color: aliceblue;
+}
+.f-link:visited{
+    color: red;
+}
+
+/*home*/
+
+/*about*/

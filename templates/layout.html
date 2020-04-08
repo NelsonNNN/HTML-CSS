@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css')}}">
+    <title>HTML/CSS</title>
+</head>
+<body>
+    <header class='header'>
+        <a class='logo' href={{url_for('home')}}>HTML/CSS</a>
+        <nav class='navigation'>
+            <div class='div-link'>
+                <a class='link' href={{url_for('home')}}>Home</a>
+                <a class='link' href={{url_for('about')}}>About</a>
+                <a class='link' href={{url_for('login')}}>Login</a>
+                <a class='link' href={{url_for('registration')}}>Registration</a>
+            </div>
+        </nav>
+        <button class='button'>Contact</button>
+    </header>
+    <div class='block'>
+        {% block content %}{% endblock %}
+</body>
+</html>
