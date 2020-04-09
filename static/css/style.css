@@ -1,5 +1,6 @@
 html {
     height: 100%;
+    width: 100%;
 }
 body {
     height: 100%;
@@ -11,6 +12,9 @@ body {
 
 /*layout.html*/
 .header{
+    position: sticky;
+    z-index: 1;
+    top:0;
     background-color: rgb(27, 26, 26);
     padding: 20px 10%;
     margin: 0;
@@ -59,7 +63,7 @@ body {
 }
 .block{
     position: relative;
-    top: 1em;
+    top: 2em;
 }
 
 /*registratio/login html*/
@@ -70,7 +74,7 @@ body {
 .form{
     position: absolute;
     left: 30%;
-    top: 2em;
+    top: 5em;
     max-width: 500px;
 }
 .fieldset{
@@ -87,13 +91,13 @@ body {
     background-color: black;
     margin-right: 40px;
     text-align: center;
-    vertical-align: middle;
 }
 .paragraph{
     font-family: Arial, Helvetica, sans-serif;
     font-size: larger;
     font-weight: bolder;
     color: aliceblue;
+    top: 50%;
 }
 .div-field2{
     display: flex;
@@ -151,5 +155,119 @@ body {
 }
 
 /*home*/
+.head1{
+    left: 50%;
+    margin: 20px 0;
+    text-align: center;
+}
+.page-menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+}
+.link2{
+    text-decoration: none;
+}
+.box{
+    background-color: darkgrey;
+    transition: all 0.2s ease-out 0.2s;
+    margin: 5px;
+    text-align: center;
+}
+.box:hover{
+    background-color: beige;
+    transform: scale(1.1, 1.1);
+}
+.page-menu >.link2:nth-child(1)> .box{
+    background-image: url('ubisoft.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.page-menu >.link2:nth-child(2)> .box{
+    background-image: url('rockstar.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.page-menu >.link2:nth-child(3)> .box{
+    background-image: url('bethesda.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.page-menu >.link2:nth-child(4)> .box{
+    background-image: url('activision.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.head{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    font-weight: bolder;
+    color: white;
+}
+.text{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    font-weight: bold;
+    color: white;
+}
+.space{
+    left: 50%;
+    margin: 40px;
+    text-align: center;
+}
+.text2{
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+}
 
 /*about*/
+.about{
+    position: absolute;
+    align-items: center;
+    top: 5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+}
+.image{
+    animation-name: image2;
+    animation-duration: 3s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+.image-file{
+    border: none;
+    border-radius: 100px;
+    width: 200px;
+    height: 200px;
+    margin-right: 100px;
+}
+.info{
+    text-align: center;
+    max-width: 100%;
+
+    -webkit-animation-name: info2;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-fill-mode: forwards;
+
+    animation-name: info2;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+@keyframes image2{
+    0%   {left: -100px;}
+    100% {left: 0;}
+}
+@-webkit-keyframes info2{
+    0%   {right: -100px;}
+    100% {right: 0;}
+}
+@keyframes info2{
+    0%   {right: -100px;}
+    100% {right: 0;}
+}
+

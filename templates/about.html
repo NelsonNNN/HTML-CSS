@@ -1,4 +1,17 @@
 {% extends 'layout.html' %}
 {%block content %}
-    <h class='head'>Welcome to the About page</h>
+    <div class='head1'>
+        <h class='head'>Welcome to the Home page</h>
+    </div> 
+    <div class='about'>
+        <div class='image'>
+            <image class='image-file' src={{url_for('static', filename='css/nelson.jpg')}} alt='nelson'>
+        </div>
+        <div class='info'>
+            <h class='head'>About me</h>
+            <p class='text'>I am a web developer specialized in
+                                 vanilla css,<br> html and flask. <br>But i am developing further.</p>
+        </div>
+    </div>
+
 {%endblock%}
