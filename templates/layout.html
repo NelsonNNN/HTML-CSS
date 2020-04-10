@@ -3,6 +3,7 @@
 <head>
     <meta>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>HTML/CSS</title>
 </head>
 <body>
@@ -16,9 +17,30 @@
                 <a class='link' href={{url_for('registration')}}>Registration</a>
             </div>
         </nav>
-        <button class='button'>Contact</button>
+        <div class='div-button'>
+            <button class='button'>Contact</button>
+            <div class='dropdown'>
+                <a href='#'>nelliville51@gmail.com</a>
+                <a href='#'>github(NelsonNNN)</a>
+            </div>
+        </div>
     </header>
     <div class='block'>
         {% block content %}{% endblock %}
+        <div class='footer2'>
+            <footer>
+                <div class='head'>
+                    <h class='head1'>Social Media contacts</h>
+                    <p class='copyright'>© 2020 Nelliville Corporation</p>
+                </div>
+                <div class='media'>
+                    <li><a href='#' class="fa fa-facebook"></a></li>
+                    <li><a href='#' class="fa fa-github"></a></li>
+                    <li><a href='#' class="fa fa-twitter"></a></li>
+                    <li><a href='#' class="fa fa-instagram"></a></li>
+                </div>
+            </footer>
+        </div>
+    </div>
 </body>
 </html>
