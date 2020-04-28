@@ -1,36 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 html {
     height: 100%;
     width: 100%;
 }
 body {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+.back{
+    position: fixed;
     height: 100%;
     width: 100%;
     margin: 0;
     background: linear-gradient(to top, rgb(66, 64, 64), rgba(65, 60, 60, 0.6));
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    position: relative;
+    background-size: cover;
+    z-index: -1;
 }
 
 /*layout.html*/
 .header{
-    position: sticky;
-    z-index: 1;
-    top:0;
     background-color: rgb(27, 26, 26);
-    padding: 20px 10%;
-    margin: 0;
     display: flex;
     justify-content: end;
     align-items: center;
+    height: 70px;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
 }
 .header a{
-    color: aliceblue;
+    color: rgb(200, 255, 0);
     text-decoration: none;
     transition: all 0.2s ease 0.2s;
+    height: 100%;
 }
 .header a:hover{
-    color: aqua;
+    background-color:rgba(27, 26, 26, 0.6) ;
 }
 .logo {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -39,7 +50,7 @@ body {
     margin-right: auto;
 }
 .navigation{
-    display: inline-block;
+    margin: 0;
 }
 .div-link{
     font-family: Arial, Helvetica, sans-serif;
@@ -64,21 +75,21 @@ body {
     background-color: rgba(113, 113, 238, 0.6);
 }
 .div-button div {
+    position: relative;
     display: none;
-    position: absolute;
-    z-index: 1;
     max-width: 100%;
     box-sizing: border-box;
     padding: 9px;
     transition: all 0.3s ease 0.3s;
     border-radius: 20px;
 }
-.div-button:hover .dropdown{
-    display: block;
+.div-button:checked .dropdown{
     background-color: black;
+    display: block;
+    position: absolute;
+    z-index: 1;
 }
 .dropdown a{
-    display: block;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
     text-decoration: none;
@@ -89,22 +100,25 @@ body {
     background: transparent;
 }
 .block{
-    position: relative;
-    top: 3em;
+    position: absolute;
+    top: 70px;
+    height: 100%;
+    width: 100%;
     padding-bottom: 0;
     margin-bottom: 0;
 }
-
-/*registratio/login html*/
-.head{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: bold;
+.container{
+    position: relative;
+    top: 30px;
+    height: 100%;
 }
+
+/*registration/login html*/
 .form{
-    position: absolute;
+    width: 60vw;
+    position: relative;
+    top: 10%;
     left: 30%;
-    top: 2em;
-    max-width: 500px;
 }
 .fieldset{
     background-color: rgb(47, 48, 45, 0.5);
@@ -112,7 +126,8 @@ body {
     padding: 0;
     margin: 0;
 }
-.div-form{
+
+.div-set{
     display: flex;
     flex-direction: row;
 }
@@ -120,13 +135,13 @@ body {
     background-color: black;
     margin-right: 40px;
     text-align: center;
+    width: 40%;
 }
 .paragraph{
     font-family: Arial, Helvetica, sans-serif;
-    font-size: larger;
+    font-size: 1rem;
     font-weight: bolder;
     color: aliceblue;
-    top: 50%;
 }
 .div-field2{
     display: flex;
@@ -155,9 +170,7 @@ body {
     border: blue solid 5px;
 }
 .div-submit{
-    left: 50%;
     margin-bottom: 20px;
-    padding: 0 40px;
 }
 .submit{
     background-color: rgb(103, 103, 231);
@@ -167,16 +180,18 @@ body {
     padding: 9px 15px;
     color: aliceblue;
     font-weight: bold;
+    width: 80%;
+    box-sizing: border-box;
  }
 .submit:hover{
-    background-color: rgba(103, 103, 231, 0.6);
+    opacity: 0.7;
 }
 .footer1{
-    position: absolute;
+    width: 100%;
 }
 .p-footer{
     font-family: Arial, Helvetica, sans-serif;
-    font-size: small;
+    font-size: 0.5rem;
     color: aliceblue;
 }
 .f-link:visited{
@@ -185,14 +200,13 @@ body {
 
 /*home*/
 .head1{
-    left: 50%;
     margin: 20px 0;
     text-align: center;
 }
-.head{
+.head1 h{
     font-family: Arial, Helvetica, sans-serif;
-    font-size: large;
-    font-weight: bolder;
+    font-size: 2rem;
+    font-weight: bold;
     color: white;
 }
 .page-menu{
@@ -246,18 +260,18 @@ body {
 }
 .text{
     font-family: Arial, Helvetica, sans-serif;
-    font-size: small;
+    font-size: 0.5rem;
     font-weight: bold;
     color: white;
 }
 .space{
-    left: 50%;
     margin: 40px;
     text-align: center;
 }
 .text2{
     font-family: 'Times New Roman', Times, serif;
     color: white;
+    font-size: 1rem;
 }
 
 /*about*/
@@ -268,7 +282,6 @@ body {
     flex-direction: row;
     justify-content: center;
     box-sizing: border-box;
-    width: 100%;
     max-width: 100%;
 }
 #image{
@@ -287,8 +300,8 @@ body {
 }
 #info{
     text-align: center;
-    max-width: 100%;
     position: relative;
+    max-width: 100%;
     transition: all 0.3s ease-in 0.1s;
     animation-name: info2;
     animation-duration: 2s;
@@ -305,12 +318,10 @@ body {
 
 /*footer*/
 .footer2{
-    position: relative;
-    top: 90vh;
-    margin: 0;
-    padding: 0;
-    bottom: 0;
+    padding-top: 2em;
     width: 100%;
+    position: relative;
+    top: 70px;
 }
 .head{
     text-align: center;
